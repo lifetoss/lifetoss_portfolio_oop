@@ -1,0 +1,55 @@
+========== note ============
+alwys call class and then object this is oops working principle...
+	require_once 'class/admin_generalClass.php';
+	require_once 'object/admin_generalObj.php';
+
+-----------------------how to use--------------------------
+	-------in class page------
+	<?php
+		class basicClass{
+			// code goes here!!!
+		}
+	?>
+	
+	------ in object page ------
+	<?php
+		$objAdmin = new basicClass();
+	?>
+	
+	----- in index page -----
+	<?
+		$res= $objAdmin->super_admin_login($user_name,$user_password, $super_admin_code);
+		// super_admin_login is function name in class	
+	?>
+-----------------------------------------------------------
+
+=========== other way =============
+
+class Base 
+	{ 
+	constgreeting ="Hello\n"; 
+	}
+class DerviedextendsBase 
+	{ 
+	constgreeting ="Hello World\n"; 
+	static function func() 
+		{ 
+		echo parent::greeting; 
+		} 
+	}
+
+   echoBase::greeting;
+   echoDerived::greeting; 
+   Derived::func();
+===================================
+
+----------magic methods------------
+name prepended with two underscores
+	__construct()
+	__toString();
+
+
+
+var_export()
+======== note =============
+myisam dont support tarnsections so we should must use innodb tbl type..
